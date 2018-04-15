@@ -4,4 +4,5 @@ from django.conf.urls import url
 
 urlpatterns = [
         path('signup/', views.SignUp.as_view(), name='signup'),
+        path('edit_names/', views.edit_names, name='edit_names'),
     ]

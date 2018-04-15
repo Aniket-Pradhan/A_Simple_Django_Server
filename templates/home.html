@@ -51,6 +51,7 @@
 			button {
 				border: 2px solid #4158d0;
 				background-color: #4158d0;
+				width: 200px;
 				-webkit-transition-duration: 0.4s;
 				color: white;
 				cursor: pointer;
@@ -148,18 +149,19 @@
 				<p>Your name is: {{user.first_name}} {{user.last_name}}</p>
 				<!-- You can show names of variables from here. Like username, first_name, last_name -->
 				<br>
-				<p>Nothing much to do...</p>
+				<p>Nothing much to do...Right?</p>
 				<p>Upload something here... Your CV, maybe?</p>
 
 				<form action="#" method="post" enctype="multipart/form-data">
 		        {% csrf_token %} {{form}} 
-		        <input type="submit" value="Upload" />
+		        <button type="submit" value="Upload">Upload</button>
 			    </form>
 			    {% for img in images %}
 			        {{forloop.counter}}.<a href="{{ img.pic.url }}">{{ img.pic.name }}</a>
 			        ({{img.upload_date}})<hr />
 			    {% endfor %}
 				
+				<p><a href = "{% url 'edit_names' %}">Update your details</a></p>
 				<p><a href = "{% url 'logout' %}">Log Out</a></p>
 			</div>
 		</div>
@@ -167,7 +169,9 @@
 		{% else %}
 		<div class="login-form text-center">
 			<div class="boxxing">
-				<h2 class="text-center">Some new page...</h2>
+				<h2 class="text-center">SquirmBook</h2>
+				<p>Click on the below links to enter the world of squirms</p>
+				<br>
 				<p><a href = "{% url 'signup' %}">Sign Up</a></p>
 				<p><a href = "{% url 'login' %}">Log In</a></p>
 				<p><a href="{% provider_login_url 'google' %}">Log In with Gmail</a></p>
