@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>{% block title %}Lorenzo Van Matterhorn{% endblock %}</title>
 	<style>
 		a:link, a:visited {
 			border: 2px solid #4158d0;
@@ -144,6 +145,7 @@
 			<div class="boxxing">
 				<h2 class="text-center">Some new page...</h2>
 				<p>Hello {{user.username}}</p>
+				<!-- You can show names of variables from here. Like username, first_name, last_name -->
 				<br>
 				<p>Nothing much to do...</p>
 				<p>Upload something here... Your CV, maybe?</p>
