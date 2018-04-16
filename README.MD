@@ -1,8 +1,12 @@
 A Simple Django Server.
 
 
-PRE-REQUISITES--
+## Pre-Requisites--
+* pipenv
+* Django (1.9+)
+* Python 3+
 
+## How to start the server--
 1. Install pipenv by `pip3 install pipenv`
 2. Install Django for the virtual environment by `pipenv install django`
 2. Enter the Virtual Environment by `pipenv shell`
